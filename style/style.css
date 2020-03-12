@@ -1,0 +1,181 @@
+canvas{
+    width: 100vw;
+    height: 100vh;
+}
+.perlinSelector{
+    position: absolute;
+    width: 25%;
+    height: 500px;
+    text-align: center;
+    top: calc(50% - 250px);
+    left:37.5%;
+    background: white;
+    display: inline-block;
+    
+
+}
+input{
+    margin-top: 10px;
+}
+.choice{
+    height:75%;
+    width: 80%;
+    margin: auto auto;
+    padding-top: 30px;
+
+
+    
+}
+.close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    visibility:hidden;
+}
+.close img{
+    width:20px;
+}
+.mobileHidden{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display:none;
+    z-index: 6;
+    text-align: center;
+    padding-top: 40%;
+    background-color: white;
+}
+
+.txtHidden{
+    font-size: 80px;
+    text-align: center;
+    margin: 50px;
+    margin-top: 80px;
+}
+#danger {
+    
+    font-size: 360px;
+}
+
+.choiceActive{
+    display:none;
+    height:75%;
+    width: 80%;
+    margin: auto auto;
+
+
+}
+.buttonC{
+    text-align: center;
+    width: 190px;
+    height: 30px;
+    margin: 0 auto;
+    text-decoration: none;
+    color:#444;
+    user-select: none;
+}
+
+.buttonC:hover{
+    cursor: pointer;
+    color:black;
+    transform: scale(1.08);
+    transition: transform  0.1s ;
+}
+.buttonC::before{
+    content:'<';
+}
+.buttonC::after{
+    content:'>';
+}
+.reptileB{
+
+
+
+}
+.chosen{
+    font-size: 25px;
+    margin-top: 25%;
+  
+}
+.chosen:hover{
+    cursor:auto;
+    transform: none;
+}
+h2{
+    text-align: center;
+    font-size: 2.5em;
+}
+h2::before{
+    content:"<";
+}
+h2::after{
+    content:">";
+}
+h4{
+    
+    text-align: right;
+    font-size: 0.8em;
+    margin-right: 5%;
+    margin-top: -5%;
+    font-weight: 200;
+
+}
+body{
+    height: 100vh;
+    width:100vw;
+    font-family:"OfficeCode";
+    overflow: hidden;
+    margin: 0;
+}
+.arcB{
+    
+}
+.gitlink::before{
+content:''
+}
+.gitlink::after{
+    content:''
+    }
+
+.clearB{
+    margin-top: 80px;
+    
+}
+#chevronUp{
+        cursor: pointer;
+        font-size: 25px;
+        
+    }
+.gitlink{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 30px;
+    left: calc(50% - 15px);
+}
+.gitlink img{
+    height: 30px;
+}
+@media (max-width:950px) {
+    
+    body{
+        height: 150px;
+        width:  150px;
+        
+
+        }
+        .perlinSelector {
+            position: absolute;
+            width: 75%;
+            height: 450px;
+            text-align: center;
+            top: calc(50% - 250px);
+            left: 12.5%;
+        }
+    }
+@font-face {
+	font-family: "OfficeCode";
+	src: url("../ressources/officeCode.ttf")
+} 
+
