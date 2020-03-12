@@ -1,7 +1,7 @@
 ﻿Generative design
 =================
 
-
+https://generative-design-8.netlify.com/
 
 --------------------------------
 
