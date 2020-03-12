@@ -18,6 +18,7 @@ window.addEventListener('resize',resize)
 
 
 saB.addEventListener("click", () => {
+    
     anim(drawSat);
     designChosen("saB")
 })
