@@ -21,6 +21,8 @@ noise.seed(Math.random());
 var drawSinSat;
 drawSinSat = function (theme) {
     var h=[236,323,359]
+    var s=[57,99,82]
+    var l=[33,45,55]
     var a, pa, v, j, particleFinals;
     particleFinals = [];
     // Logic for progressive colors
@@ -39,9 +41,9 @@ drawSinSat = function (theme) {
         
         pa = theme[j];
         v = noise.perlin2(pa.x * pa.per, pa.y * pa.per);
-        context.beginPath();
+        context.beginPath(); 
         var mult=Math.floor(Math.random() * 3)
-        context.fillStyle = "hsla(" + (h[p]+Math.floor(v+22)) + ", 45%, 80%, 1)"; //Couleur , proche du noir , intensitié color
+        context.fillStyle = "hsla(" + (h[p]+Math.floor(v+22)) + ", "+s[p]+"%, "+(l[p]+(l[p]*0.4))+"%, 1)"; //Couleur , proche du noir , intensitié color
         context.fillRect(pa.x, pa.y, 2.0, 2.0); // Espacement x,y et epaisseur x,y
         pa.he++;
         a = v * 2 * Math.PI + pa.a;
@@ -58,6 +60,8 @@ drawSinSat = function (theme) {
 var drawSinSun;
 drawSinSun = function (theme) {
     var h=[347,48,20]
+    var s=[92,98,97]
+    var l=[51,64,64]
     var a, pa, v, j, particleFinals;
     particleFinals = [];
     for (j = 0; j < theme.length; j++) {
@@ -76,7 +80,7 @@ drawSinSun = function (theme) {
             v = noise.perlin2(pa.x * pa.per, pa.y * pa.per);
             context.beginPath();
             var mult=Math.floor(Math.random() * 3)
-            context.fillStyle = "hsla(" + (h[p]+Math.floor(v+22))  + ", 45%, 80%, 1)"; //Couleur , proche du noir , intensitié color
+            context.fillStyle = "hsla(" + (h[p]+Math.floor(v+2))  + ", "+s[p]+"%, "+(l[p])+"%, 1)"; //Couleur , proche du noir , intensitié color
             context.fillRect(pa.x, pa.y, 2.0, 2.0); // Espacement x,y et epaisseur x,y
             pa.he++;
             a = v * 2 * Math.PI + pa.a;
@@ -92,6 +96,8 @@ drawSinSun = function (theme) {
 var drawSinFull;
 drawSinFull = function (theme) {
     var h=[236,323,183]
+    var s=[83,99,45]
+    var l=[41,85,68]
     var a, pa, v, j, particleFinals;
     particleFinals = [];
     for (j = 0; j < theme.length; j++) {
@@ -110,7 +116,7 @@ drawSinFull = function (theme) {
             v = noise.perlin2(pa.x * pa.per, pa.y * pa.per);
             context.beginPath();
             var mult=Math.floor(Math.random() * 3)
-            context.fillStyle = "hsla(" + (h[p]+Math.floor(v+22))  + ", 45%, 80%, 1)"; //Couleur , proche du noir , intensitié color
+            context.fillStyle = "hsla(" + (h[p]+Math.floor(v+2))  + ", "+s[p]+"%, "+l[p]+"%, 1)"; //Couleur , proche du noir , intensitié color
             context.fillRect(pa.x, pa.y, 2.0, 2.0); // Espacement x,y et epaisseur x,y
             pa.he++;
             a = v * 2 * Math.PI + pa.a;
